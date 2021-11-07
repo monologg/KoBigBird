@@ -1,0 +1,6 @@
+data/
+pretrain_tfrecords/
+*wiki*.txt
+
+init_checkpoint/
+kobigbird-bert-base*/

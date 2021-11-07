@@ -1,0 +1,7 @@
+tqdm==4.62.3
+torch==1.8.1
+transformers==4.11.3
+datasets==1.13.3
+scikit-learn==0.24.2
+beautifulsoup4==4.6.0
+lxml==4.6.3

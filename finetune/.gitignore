@@ -1,0 +1,5 @@
+cache/
+ckpt/
+output/
+seq2seq-model/
+*.out

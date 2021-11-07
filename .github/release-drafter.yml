@@ -1,0 +1,21 @@
+name-template: "v$RESOLVED_VERSION"
+tag-template: "v$RESOLVED_VERSION"
+
+categories:
+  - title: ":rocket: Features"
+    labels: [enhancement, feature]
+  - title: ":wrench: Fixes"
+    labels: [bug, bugfix, fix]
+  - title: ":toolbox: Maintenance & Refactor"
+    labels: [refactor, refactoring, chore]
+  - title: ":package: Build System & CI/CD & Test"
+    labels: [build, ci, testing, test]
+  - title: ":pencil: Documentation"
+    labels: [documentation]
+  - title: ":arrow_up: Dependencies updates"
+    labels: [dependencies]
+
+template: |
+  ## What’s Changed
+
+  $CHANGES
