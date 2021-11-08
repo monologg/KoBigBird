@@ -20,7 +20,7 @@
 
 <p align="center">
     <a href="https://github.com/monologg/KoBigBird/blob/master/LICENSE">
-        <img alt="Apache 2.0" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg">
+        <img alt="Apache 2.0" src="https://img.shields.io/badge/license-Apache%202.0-yellow.svg">
     </a>
     <a href="https://github.com/monologg/KoBigBird/issues">
         <img alt="Issues" src="https://img.shields.io/github/issues/monologg/KoBigBird">
@@ -28,7 +28,10 @@
     <a href="https://github.com/monologg/KoBigBird/actions/workflows/linter.yml">
         <img alt="linter" src="https://github.com/monologg/KoBigBird/actions/workflows/linter.yml/badge.svg">
     </a>
- </p>
+    <a href="https://zenodo.org/badge/latestdoi/421821899">
+        <img alt="DOI" src="https://zenodo.org/badge/421821899.svg">
+    </a>
+</p>
 
 </div>
 
@@ -101,13 +104,15 @@ tokenizer = AutoTokenizer.from_pretrained("monologg/kobigbird-bert-base")  # Ber
 KoBigBird를 사용하신다면 아래와 같이 인용해주세요.
 
 ```bibtex
-@misc{park2021kobigbird,
-  author       = {Jangwon Park, Donggyu Kim},
+@software{jangwon_park_2021_5654154,
+  author       = {Jangwon Park and Donggyu Kim},
   title        = {KoBigBird: Pretrained BigBird Model for Korean},
-  year         = {2021},
-  publisher    = {GitHub},
-  journal      = {GitHub repository},
-  howpublished = {\url{https://github.com/monologg/KoBigBird}}
+  month        = nov,
+  year         = 2021,
+  publisher    = {Zenodo},
+  version      = {1.0.0},
+  doi          = {10.5281/zenodo.5654154},
+  url          = {https://doi.org/10.5281/zenodo.5654154}
 }
 ```
 
