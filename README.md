@@ -28,8 +28,8 @@
     <a href="https://github.com/monologg/KoBigBird/actions/workflows/linter.yml">
         <img alt="linter" src="https://github.com/monologg/KoBigBird/actions/workflows/linter.yml/badge.svg">
     </a>
-    <a href="https://zenodo.org/badge/latestdoi/421821899">
-        <img alt="DOI" src="https://zenodo.org/badge/421821899.svg">
+    <a href="https://doi.org/10.5281/zenodo.5654154">
+        <img alt="DOI" src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.5654154-blue">
     </a>
 </p>
 
