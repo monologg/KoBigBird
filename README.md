@@ -37,7 +37,9 @@
 
 ## What is BigBird?
 
-<img width="700px" src="https://github.com/monologg/KoBigBird/raw/master/.github/images/sparse-attention.png">
+<div align="center">
+  <img width="700px" src="https://github.com/monologg/KoBigBird/raw/master/.github/images/sparse-attention.png">
+</div>
 
 [BigBird: Transformers for Longer Sequences](https://arxiv.org/abs/2007.14062)에서 소개된 **sparse-attention** 기반의 모델로, 일반적인 BERT보다 **더 긴 sequence**를 다룰 수 있습니다.
 
