@@ -12,7 +12,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-"""Convert BigBird checkpoint."""
+"""Converts BigBird checkpoint."""
 
 
 import argparse
@@ -34,11 +34,11 @@ transformers.logging.enable_explicit_format()
 require_version("torch>=1.6.0", "To fix: pip install torch>=1.6.0")
 check_min_version("4.11.3")
 
-logger.warning("This script is tested on `transformers==4.11.3`. Might not work properly on other version!")
+logger.warning("This script is tested on `transformers==4.11.3`. Might not work properly on the other version!")
 
 
 def load_bigbird_config(config_filepath):
-    """Load bigbird config from original tf checkpoint. (pretrain_config.json)"""
+    """Loads bigbird config from original tf checkpoint. (pretrain_config.json)"""
     config_key_lst = [
         "attention_probs_dropout_prob",
         "attention_type",
