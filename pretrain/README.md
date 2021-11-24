@@ -24,7 +24,7 @@
   - Sentencepiece tokenizer 사용이 강제되어 있는 부분
   - RoBERTa Vocab에 맞춰 token id가 하드코딩된 부분
 
-- **`Tensorflow Datasets (tfds)`를 사용하지 않도록 변경**
+- **`TensorFlow Datasets (tfds)`를 사용하지 않도록 변경**
 
   - 여러 버전으로 테스트해보았지만 정상 작동하지 않는 이슈 존재
   - 그 대신 TFRecord Builder 코드 추가 ([`create_pretraining_data.py`](./create_pretraining_data.py))
@@ -49,7 +49,7 @@ init_checkpoint
 
 ### 1. Prepare Tokenizer
 
-- `Huggingface Transformers`에 호환되는 tokenizer 준비해야 합니다. (KoBigBird의 [tokenizer](./tokenizer)를 sample로 업로드)
+- `Hugging Face Transformers`에 호환되는 tokenizer 준비해야 합니다. (KoBigBird의 [tokenizer](./tokenizer)를 sample로 업로드)
 - `BigBirdTokenizer`와의 호환을 위해 `BertTokenizer`에 `bos token(=<s>)`, `eos token(=</s>)`을 추가
 
 ### 2. Create TFRecord
@@ -132,7 +132,7 @@ pip3 install -r requirements.txt
 bash scripts/base_size_tpu.sh
 ```
 
-## Convert Tensorflow checkpoint to Huggingface Transformers format
+## Convert Tensorflow checkpoint to Hugging Face Transformers format
 
 ```bash
 python3 convert_bigbird_tf_to_pt.py \
@@ -152,5 +152,5 @@ python3 convert_bigbird_tf_to_pt.py \
 - [BERT tensorflow v1 implementation](https://github.com/google-research/bert)
 - [BERT tensorflow v2 implementation](https://github.com/tensorflow/models/tree/d4c5f8975a7b89f01421101882bc8922642c2314/official/nlp/bert)
 - [ELECTRA implementation](https://github.com/google-research/electra)
-- [Huggingface Transformers Documentation](https://huggingface.co/transformers/)
+- [Hugging Face Transformers Documentation](https://huggingface.co/transformers/)
 - [ko-lm-dataformat](https://github.com/monologg/ko_lm_dataformat)
