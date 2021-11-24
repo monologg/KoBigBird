@@ -56,7 +56,7 @@ def create_float_feature(values):
 
 MaskedLmInstance = collections.namedtuple("MaskedLmInstance", ["index", "label"])
 
-# A _Gram is a [half-open) interval of token indices which form a word.
+# A _Gram is a (half-open) interval of token indices which form a word.
 # E.g.,
 #   words:  ["The", "doghouse"]
 #   tokens: ["The", "dog", "##house"]
@@ -94,7 +94,7 @@ def _window(iterable, size):
 
 
 def _contiguous(sorted_grams):
-    """Test whether a sequence of grams is contiguous.
+    """Tests whether a sequence of grams is contiguous.
     Args:
       sorted_grams: _Grams which are sorted in increasing order.
     Returns:
@@ -110,7 +110,7 @@ def _contiguous(sorted_grams):
 
 
 def _wordpieces_to_grams(tokens, special_tokens):
-    """Reconstitue grams (words) from `tokens`.
+    """Reconstitutes grams (words) from `tokens`.
     E.g.,
        tokens: ['[CLS]', 'That', 'lit', '##tle', 'blue', 'tru', '##ck', '[SEP]']
         grams: [          [1,2), [2,         4),  [4,5) , [5,       6)]
@@ -137,7 +137,7 @@ def _wordpieces_to_grams(tokens, special_tokens):
 
 
 def _masking_ngrams(grams, max_ngram_size, max_masked_tokens):
-    """Create a list of masking {1, ..., n}-grams from a list of one-grams.
+    """Creates a list of masking {1, ..., n}-grams from a list of one-grams.
     This is an extention of 'whole word masking' to mask multiple, contiguous
     words such as (e.g., "the red boat").
     Each input gram represents the token indices of a single word,
@@ -187,8 +187,8 @@ def _masking_ngrams(grams, max_ngram_size, max_masked_tokens):
         random.shuffle(v)
 
     # Create the weighting for n-gram length selection.
-    # Stored cummulatively for `random.choices` below.
-    cummulative_weights = list(itertools.accumulate([1.0 / n for n in range(1, max_ngram_size + 1)]))
+    # Stored cumulatively for `random.choices` below.
+    cumulative_weights = list(itertools.accumulate([1.0 / n for n in range(1, max_ngram_size + 1)]))
 
     output_ngrams = []
     # Keep a bitmask of which tokens have been masked.
@@ -196,10 +196,10 @@ def _masking_ngrams(grams, max_ngram_size, max_masked_tokens):
     # Loop until we have enough masked tokens or there are no more candidate
     # n-grams of any length.
     # Each code path should ensure one or more elements from `ngrams` are removed
-    # to guarentee this loop terminates.
+    # to guarantee this loop terminates.
     while sum(masked_tokens) < max_masked_tokens and sum(len(s) for s in ngrams.values()):
-        # Pick an n-gram size based on our weights.
-        sz = random.choices(range(1, max_ngram_size + 1), cum_weights=cummulative_weights)[0]
+        # Pick a n-gram size based on our weights.
+        sz = random.choices(range(1, max_ngram_size + 1), cum_weights=cumulative_weights)[0]
 
         # Ensure this size doesn't result in too many masked tokens.
         # E.g., a two-gram contains _at least_ two tokens.
@@ -354,7 +354,7 @@ class ExampleBuilder(object):
         all_segment_len = len(first_segment) + len(second_segment)
 
         # NOTE
-        # If `first_seg + second_seg` is too long, we will make them to multiple chunk of single sentence
+        # If `first_seg + second_seg` is too long, we will make them to multiple chunks of a single sentence
         if all_segment_len >= self._long_seq_length_limit:
             all_segment = first_segment + second_segment
 
@@ -585,7 +585,7 @@ def seed_worker(job_id, args):
 
 def get_files(input_dir):
     """
-    Get all files from input directory.
+    Gets all files from input directory.
     ONLY support `jsonl.zst` and `txt` (kldf format or plain text)
     """
     filetypes = ["jsonl.zst", "txt"]
@@ -594,7 +594,7 @@ def get_files(input_dir):
     flattened_list = [str(item) for sublist in files for item in sublist]
     if not flattened_list:
         raise Exception(
-            f"""did not find any files at this path {input_dir}, please also ensure your files are in format {filetypes}"""
+            f"""did not find any files on this path {input_dir}, please also ensure your files are in format {filetypes}"""
         )
     flattened_list = sorted(flattened_list)
     return flattened_list
