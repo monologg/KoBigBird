@@ -52,7 +52,7 @@
 - 🤗 [Huggingface Hub](https://huggingface.co/monologg/kobigbird-bert-base)에 업로드된 모델을 곧바로 사용할 수 있습니다:)
 - 일부 이슈가 해결된 `transformers>=4.11.0` 사용을 권장합니다. ([MRC 이슈 관련 PR](https://github.com/huggingface/transformers/pull/13143))
 - **BigBirdTokenizer 대신에 `BertTokenizer` 를 사용해야 합니다. (`AutoTokenizer` 사용시 `BertTokenizer`가 로드됩니다.)**
-- 자세한 사용법은 [BigBird Tranformers documentation](https://huggingface.co/transformers/model_doc/bigbird.html)을 참고해주세요.
+- 자세한 사용법은 [BigBird Tranformers documentation](https://huggingface.co/docs/transformers/v4.20.1/en/model_doc/big_bird)을 참고해주세요.
 
 ```python
 from transformers import AutoModel, AutoTokenizer

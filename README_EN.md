@@ -52,7 +52,7 @@
 - Available on the 🤗 [Huggingface Hub](https://huggingface.co/monologg/kobigbird-bert-base)!
 - Recommend to use `transformers>=4.11.0`, which some issues are fixed ([PR related with MRC issue](https://github.com/huggingface/transformers/pull/13143))
 - **You have to use `BertTokenizer` instead of BigBirdTokenizer (`BertTokenizer` will be loaded if you use `AutoTokenizer`)**
-- For detail guideline, see [BigBird Tranformers documentation](https://huggingface.co/transformers/model_doc/bigbird.html).
+- For detail guideline, see [BigBird Tranformers documentation](https://huggingface.co/docs/transformers/v4.20.1/en/model_doc/big_bird).
 
 ```python
 from transformers import AutoModel, AutoTokenizer
