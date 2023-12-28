@@ -95,7 +95,7 @@ tokenizer = AutoTokenizer.from_pretrained("monologg/kobigbird-bert-base")  # Ber
 
 ## Docs
 
-- [Pretraing BigBird](pretrain/README.md)
+- [Pretraining BigBird](pretrain/README.md)
 - [Finetune on Short Sequence Dataset](docs/short_seq_evaluation_ko.md)
 - [Finetune on Long Sequence Dataset](finetune/README.md)
 - [Download Tensorflow v1 checkpoint](docs/download_tfv1_ckpt.md)
